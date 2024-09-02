@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-66e163e34ea9cf689873eb191bc2ebd5"}, "mark": {"type": "line"}, "encoding": {"color": {"field": "education_level", "scale": {"scheme": "category10"}, "type": "nominal"}, "x": {"field": "age", "title": "Age", "type": "quantitative"}, "y": {"aggregate": "average", "field": "income", "title": "Average Income", "type": "quantitative"}}, "title": "Average Income by Age", "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json", "datasets": {"data-66e163e34ea9cf689873eb191bc2ebd5": [{"age": 22, "income": 48000, "gender": "Male", "education_level": "Bachelor"}, {"age": 25, "income": 52000, "gender": "Female", "education_level": "Master"}, {"age": 30, "income": 60000, "gender": "Male", "education_level": "PhD"}, {"age": 35, "income": 75000, "gender": "Female", "education_level": "Bachelor"}, {"age": 28, "income": 65000, "gender": "Male", "education_level": "Master"}, {"age": 40, "income": 85000, "gender": "Female", "education_level": "PhD"}, {"age": 32, "income": 70000, "gender": "Male", "education_level": "Bachelor"}, {"age": 27, "income": 55000, "gender": "Female", "education_level": "Master"}, {"age": 29, "income": 62000, "gender": "Male", "education_level": "PhD"}, {"age": 31, "income": 68000, "gender": "Female", "education_level": "Bachelor"}, {"age": 23, "income": 49000, "gender": "Male", "education_level": "Master"}, {"age": 26, "income": 53000, "gender": "Female", "education_level": "PhD"}, {"age": 34, "income": 74000, "gender": "Male", "education_level": "Bachelor"}, {"age": 37, "income": 80000, "gender": "Female", "education_level": "Master"}, {"age": 28, "income": 68000, "gender": "Male", "education_level": "PhD"}, {"age": 41, "income": 86000, "gender": "Female", "education_level": "Bachelor"}, {"age": 33, "income": 71000, "gender": "Male", "education_level": "Master"}, {"age": 30, "income": 63000, "gender": "Female", "education_level": "PhD"}, {"age": 35, "income": 77000, "gender": "Male", "education_level": "Bachelor"}, {"age": 25, "income": 52000, "gender": "Female", "education_level": "Master"}, {"age": 32, "income": 69000, "gender": "Male", "education_level": "PhD"}, {"age": 38, "income": 82000, "gender": "Female", "education_level": "Bachelor"}, {"age": 27, "income": 54000, "gender": "Male", "education_level": "Master"}, {"age": 29, "income": 61000, "gender": "Female", "education_level": "PhD"}, {"age": 36, "income": 78000, "gender": "Male", "education_level": "Bachelor"}, {"age": 40, "income": 85000, "gender": "Female", "education_level": "Master"}, {"age": 31, "income": 66000, "gender": "Male", "education_level": "PhD"}, {"age": 28, "income": 64000, "gender": "Female", "education_level": "Bachelor"}, {"age": 24, "income": 50000, "gender": "Male", "education_level": "Master"}, {"age": 37, "income": 79000, "gender": "Female", "education_level": "PhD"}, {"age": 33, "income": 72000, "gender": "Male", "education_level": "Bachelor"}, {"age": 26, "income": 51000, "gender": "Female", "education_level": "Master"}, {"age": 39, "income": 83000, "gender": "Male", "education_level": "PhD"}, {"age": 30, "income": 62000, "gender": "Female", "education_level": "Bachelor"}, {"age": 35, "income": 77000, "gender": "Male", "education_level": "Master"}, {"age": 32, "income": 69000, "gender": "Female", "education_level": "PhD"}, {"age": 28, "income": 63000, "gender": "Male", "education_level": "Bachelor"}, {"age": 24, "income": 52000, "gender": "Female", "education_level": "Master"}, {"age": 27, "income": 55000, "gender": "Male", "education_level": "PhD"}, {"age": 40, "income": 86000, "gender": "Female", "education_level": "Bachelor"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
